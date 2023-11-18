@@ -20,6 +20,8 @@ Our areas of focus include but are not limited to:
 - **Environmental Sustainability**
 - **Community Welfare Applications**
 - **Economic Empowerment Tools**
+- **Automation with AI**
+- **Algorithm Creation**
 
 ## Get Involved
 Join us in our journey to innovate and make a difference! Collaborate, contribute, and explore our open-source projects hosted on this GitHub repository.
