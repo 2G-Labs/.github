@@ -15,6 +15,10 @@ Our primary mission is to leverage our expertise and passion for technology to p
 
 ## Areas of Focus
 Our areas of focus include but are not limited to:
+- **Tools for daily use**
+- **Researching the best practices**
+- **Researching Software usages in different fields**
+- **Automating repeated tasks**
 - **Healthcare Solutions**
 - **Education and Learning Platforms**
 - **Environmental Sustainability**
