@@ -29,6 +29,7 @@ Our areas of focus include but are not limited to:
 
 ## Get Involved
 Join us in our journey to innovate and make a difference! Collaborate, contribute, and explore our open-source projects hosted on this GitHub repository.
+Fill the [form](https://forms.gle/peuajmbS1yTAfozT8) to join this organisation.
 
 ## Contact Us
 For inquiries, collaboration opportunities, or feedback, feel free to reach out to us at [2g.oz.labs@gmail.com](mailto:2g.oz.labs@gmail.com).
