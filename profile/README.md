@@ -31,7 +31,7 @@ Our areas of focus include but are not limited to:
 Join us in our journey to innovate and make a difference! Collaborate, contribute, and explore our open-source projects hosted on this GitHub repository.
 
 ## Contact Us
-For inquiries, collaboration opportunities, or feedback, feel free to reach out to us at [2G Labs LinkedIn Page](https://www.linkedin.com/company/2g-labs).
+For inquiries, collaboration opportunities, or feedback, feel free to reach out to us at [2g.oz.labs@gmail.com](mailto:2g.oz.labs@gmail.com).
 
 Connect with us on LinkedIn: [2G Labs LinkedIn Page](https://www.linkedin.com/company/2g-labs)
 
