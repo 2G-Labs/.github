@@ -2,6 +2,9 @@
 
 Welcome to 2G Labs! We are a forward-thinking organization dedicated to researching and developing innovative software solutions that address real-life problems and challenges.
 
+## Working Guide
+Start working now, check [Working Guide](/project/WORKING_GUIDE.md)
+
 ## About Us
 At 2G Labs, we believe in harnessing the power of technology to create impactful and practical solutions. Our team is committed to conducting in-depth research and applying cutting-edge technologies to develop software that tackles various real-world problems across different domains.
 
