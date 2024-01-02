@@ -1,6 +1,6 @@
 # 2G Labs
 This repository if for storing organisation wide rules & policies. Which includes:
-- Company Policy
+- Organisation Policy
 - Coding Style definition
 - Hierarchy of 2G Labs
 - Getting Started with 2G Labs
