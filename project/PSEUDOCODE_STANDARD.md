@@ -1,123 +1,146 @@
-# Pseudocode Standard v1.0
+# Coding Style Convention
 
-## Naming Conventions (camelCase)
-- **Variables:** Descriptive names starting with a lowercase letter (e.g., `currentIndex`, `tempValue`).
-- **Functions/Procedures:** Meaningful names starting with a lowercase letter (e.g., `insertNode`, `bubbleSort`).
+| Code element                |           Convention           | Example                                                                 |
+| --------------------------- | :----------------------------: | ----------------------------------------------------------------------- |
+| Defines                     |      SCREAMING_SNAKE_CASE      | `#define PLATFORM_DESKTOP`                                              |
+| Macros                      |      SCREAMING_SNAKE_CASE      | `#define MIN(A,B) (((A)<(B))?(A):(B))`                                  |
+| Variables                   |           camelCase            | `int screenWidth = 0;`, `float targetFrameTime = 0.016f;`               |
+| Constants                   |      SCREAMING_SNAKE_CASE      | `const int MAX_ITEMS = 8;`                                              |
+| Pointers                    |         Type \*pointer         | `Texture2D *array = NULL;`                                              |
+| float values                |              x.xf              | `float gravity = 0.09f`                                                 |
+| Operators(\* /)             |         value1\*value2         | `int product = value*6;`, `int division = value/4;`                     |
+| Operators(+ -)              |        value1 + value2         | `int sum = value + 10;`, `int res = value - 5;`                         |
+| Operators(,)                |         value1, value2         | `int sum, total;`                                                       |
+| Struct/Class/interface/Enum |           PascalCase           | `struct Texture2D`, `class Material`, `inteface Callable`, `enum Color` |
+| Struct/Class members        |           camelCase            | `texture.width`, `color.r`                                              |
+| Enum members                |      SCREAMING_SNAKE_CASE      | `Color::BLUE`, `Color::RED`, `ON`                                       |
+| Functions(Standalone)       |           PascalCase           | `InitWindow()`, `LoadImageFromMemory()`                                 |
+| Methods                     |           camelCase            | `v.distance()`, `s.length()`                                            |
+| Functions params            |           camelCase            | `width`, `height`                                                       |
+| Ternary Operator            | (condition)? result1 : result2 | `printf("Value is 0: %s", (value == 0)? "yes" : "no");`                 |
+| Type Casting                |          (Type)value           | `int value = (int)3.1416f;`                                             |
 
-## Syntax Guidelines
-- **Indentation:** 4 Space indentation for consistent use & readability (Don't use tabs).
-- **Formatting:** Clear and readable formatting throughout the code.
-- **Comments:** Use `#` as single line comment to explain complex logic or denote sections, providing insights into the algorithm's logic.
-- **Sections:** Divide the pseudocode into sections using blankline and a comment (heading of the section).
+Other conventions:
 
-## Standard Notations
-Use these standard notations for writing pseudocodes.
+- All defined variables are ALWAYS initialized
+- Four spaces are used, instead of TABS
+- Trailing spaces are ALWAYS avoided
+- Control flow statements and `break`/`continue` keywords are followed **by a space**:
 
-### Comments
+```c
+if (condition) value = 0;
+
+while (!WindowShouldClose()) {
+
+}
+
+for (int i = 0; i < NUM_VALUES; i++) printf("%i", i);
+
+switch (value) {
+    case 0:
+    // ...
+    break;
+
+    case 2:
+    break;
+
+    default:
+    break;
+}
 ```
-# This is a comment, it starts with `#` and ends with the newline.
+
+- All conditions are always between parenthesis, but not boolean values:
+
+```c
+if ((value > 1) && (value < 50) && valueActive) {
+
+}
 ```
 
-### Main Algorithm body
-- **Without input:**
-  ```plaintext
-  function algorithmName():
-      # algorithm
-  ```
-- **With inputs:**
-  ```plaintext
-  function algorithmName(param1, param2):
-      # algorithm
-  ```
+- Curly braces are opened in the same line of the statement preceded by a space:
 
-> [!Note]
-> The `param1` & `param2` should be self explainatory.
-
-
-### Control Structures
-- **Conditionals:**
-  ```plaintext
-  if condition:
-      # code block
-  else if anotherCondition:
-      # code block
-  else:
-      # code block
-  ```
-- **Loops:**
-  ```plaintext
-  while condition:
-      # code block
-
-  for i from startValue to endValue:
-      # code block
-
-  for item in collection:
-      # code block
-  ```
-
-### Operations
-- **Variables Operations:**
-  - Assignment: `variable = value`
-  - Arithmetic Operations: `+, -, *, /, %`
-  - Increment/Decrement: `++, --`
-  - Comparison: `==, !=, <, >, <=, >=`
-  - Logical Operations: `AND, OR, NOT`
-- **Data Structure Operations:**
-  - Arrays/Lists:
-    - Access: `array[index]`
-    - Insertion: `array.append(element)`
-    - Deletion: `array.remove(element)`
-  - Linked Lists:
-    - Node Creation: `createNode(value)`
-    - Node Insertion: `insertNode(value)`
-    - Node Deletion: `deleteNode(value)`
-
-## Example Pseudocode
-
-```plaintext
-# Example pseudocode illustrating the standard conventions
-
-function binarySearch(array, target):
-    left = 0
-    right = array.length - 1
-
-    while left <= right:
-        mid = floor((left + right) / 2)
-
-        if array[mid] == target:
-            return mid
-        else if array[mid] < target:
-            left = mid + 1
-        else:
-            right = mid - 1
-
-    return -1
+```c
+void SomeFunction() {
+   // TODO: Do something here!
+}
 ```
-## Example Template:
 
-```plaintext
-# Algorithm Name: Brief Description
+- Empty body are defined in a single line:
 
-# Initialize variables
-variable_1 = value
-variable_2 = value
-
-# Function/Procedure Definitions
-function_name(parameter1, parameter2):
-    # Function logic
-    ...
-
-    # Main algorithm steps
-    for i = 1 to n:
-        if condition:
-            perform action1
-        else:
-            perform action2
-
-    # Final output or return statement
-    return result
+```c
+class SomeClass { };
 ```
-## Conclusion
-Adhering to these pseudocode standards ensures consistency, readability,
-and a better understanding of algorithms and data structures implementations, minimising ambiguity in code interpretation.
+
+## File Organization Conventions
+
+| Item Type           |        Convention        | Example                                               |
+| ------------------- | :----------------------: | ----------------------------------------------------- |
+| Resource file       |      snake_case.ext      | `main_title.png`, `cubicmap.png`, `audio/gunshot.wav` |
+| Directory name      |        snake_case        | `screens`, `characters`, `common_files`               |
+| Root/Project name   |        PascalCase        | `FishInsulter`, `ExampleProject`                      |
+| Source code files   |      PascalCase.ext      | `Main.c`, `GameplayScreen.c`, `PlayerController.java` |
+| Documentation files | SCREAMING_SNAKE_CASE.ext | `README.md`, `CONTRIBUTING.md`, `LICENSE`             |
+
+- `Build`/`Config` files (CMakeLists.txt, build.sh, config.json, Makefile) should be `snake_case` wherever possible, and may use standard naming conventions for the build system.
+- Source code files are organized by functionality and usage in the app. Each file should contain a single class or a group of related functions.
+- Resource files are organized by context and usage in the app. Loading requirements for data are also considered (grouping data when required).
+- Descriptive names are used for the files, just reading the name of the file it should be possible to know what is that file and where it fits in the app.
+
+```
+resources/audio/fx/long_jump.wav
+resources/audio/music/main_theme.ogg
+resources/screens/logo/logo.png
+resources/screens/title/title.png
+resources/screens/gameplay/background.png
+resources/characters/player.png
+resources/characters/enemy_slime.png
+resources/common/font_arial.ttf
+resources/common/gui.png
+```
+
+### Project Directory Conventions
+
+Standard C/C++ project directory structure:
+
+```
+ProjectName/
+├── src/
+│   ├── Main.c
+│   ├── Game.c
+│   └── Game.h
+├── tests/
+├── resources/
+│   ├── background.png
+│   └── font.ttf
+├── libs/
+│   └── libname/
+├── docs/
+│   ├── README.md
+│   └── CONTRIBUTING.md
+├── build/
+│   └── Makefile
+├── CMakeLists.txt
+├── configure.sh
+├── build.sh
+├── LICENSE
+├── README.md
+├── .clang-format
+└── .clang-tidy/
+```
+
+| Items         | Description                                            |
+| ------------- | ------------------------------------------------------ |
+| src/          | Source code files                                      |
+| tests/        | Test files                                             |
+| build/        | Compiled object files and binaries                     |
+| resources/    | Resource/Assets files (textures, audio, fonts, etc.)   |
+| docs/         | Documentation files (CONTRIBUTING.md, README.md, etc.) |
+| libs/         | External libraries and dependencies                    |
+| .clang-format | ClangFormat configuration file                         |
+| configure.sh  | Project configuration script                           |
+| build.sh      | Project build script                                   |
+
+## Commenting & Documentation Conventions
+
+- Use less comments, write code that is self-explanatory.
+- Document all public functions and classes using Doxygen style comments.
